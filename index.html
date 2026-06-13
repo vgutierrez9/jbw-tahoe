@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jen's Bachelorette Weekend · Lake Tahoe · July 2026</title>
+<meta name="color-scheme" content="light">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --white: #FFFFFF;
+    --cream: #FAF8F3;
+    --blush: #F2EAE4;
+    --sage: #6B8F6E;
+    --forest: #3D5C40;
+    --gold: #C9A84C;
+    --gold-light: #E8D49A;
+    --charcoal: #2C2C2A;
+    --muted: #7A7A72;
+    --friday-bg: #EBF4FA;
+    --friday-accent: #4A7FA8;
+    --friday-gold: #C9A84C;
+    --saturday-bg: #F0EBF8;
+    --saturday-accent: #8B6AAE;
+    --saturday-pink: #D4789A;
+    --saturday-blue: #7AAED4;
+  }
+  html { scroll-behavior: smooth; color-scheme: light; }
+  body { font-family: 'Jost', sans-serif; background: var(--cream); color: var(--charcoal); font-weight: 300; line-height: 1.7; font-size: 15px; -webkit-text-size-adjust: 100%; }
+
+  /* HERO */
+  .hero { background: var(--white); text-align: center; padding: 3rem 2rem 2.5rem; border-bottom: 1px solid var(--gold-light); }
+  .hero-frame { display: inline-block; border: 1px solid var(--gold); padding: 2.5rem 3rem; position: relative; max-width: 480px; width: 100%; }
+  .hero-frame::before, .hero-frame::after { content: ''; position: absolute; width: 18px; height: 18px; border-color: var(--gold); border-style: solid; }
+  .hero-frame::before { top: -4px; left: -4px; border-width: 1px 0 0 1px; }
+  .hero-frame::after { bottom: -4px; right: -4px; border-width: 0 1px 1px 0; }
+  .hero-eyebrow { font-size: 11px; font-weight: 400; letter-spacing: 0.2em; text-transform: uppercase; color: var(--sage); margin-bottom: 1rem; }
+  .hero-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.8rem, 8vw, 4.2rem); font-weight: 300; font-style: italic; color: var(--forest); line-height: 1.1; margin-bottom: 1.2rem; }
+  .hero-divider { width: 60px; height: 1px; background: var(--gold); margin: 0 auto 1rem; }
+  .hero-sub { font-size: 13px; font-weight: 400; letter-spacing: 0.1em; color: var(--muted); line-height: 1.9; }
+  .hero-hashtag { display: inline-block; margin-top: 1rem; font-size: 12px; color: var(--sage); letter-spacing: 0.12em; }
+
+  /* NAV */
+  .nav { background: var(--white); border-bottom: 1px solid var(--gold-light); position: sticky; top: 0; z-index: 100; }
+  .nav-inner { display: flex; justify-content: center; overflow-x: auto; scrollbar-width: none; }
+  .nav-inner::-webkit-scrollbar { display: none; }
+  .nav-link { font-size: 11px; font-weight: 400; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); text-decoration: none; padding: 14px 16px; white-space: nowrap; border-bottom: 2px solid transparent; transition: color 0.2s, border-color 0.2s; }
+  .nav-link:hover { color: var(--forest); border-bottom-color: var(--gold); }
+
+  /* SECTIONS */
+  .section { max-width: 720px; margin: 0 auto; padding: 3rem 1.5rem; }
+  .section-eyebrow { font-size: 10px; font-weight: 500; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+  .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem, 5vw, 2.6rem); font-weight: 300; color: var(--forest); margin-bottom: 1.5rem; line-height: 1.2; }
+  .section-title em { font-style: italic; }
+
+  /* GLANCE */
+  .glance-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--gold-light); border: 1px solid var(--gold-light); overflow: hidden; margin-bottom: 2rem; }
+  .glance-card { background: var(--white); padding: 1.5rem 1rem; text-align: center; }
+  .glance-day { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-style: italic; color: var(--forest); margin-bottom: 0.25rem; }
+  .glance-date { font-size: 11px; letter-spacing: 0.12em; color: var(--gold); font-weight: 500; text-transform: uppercase; margin-bottom: 0.75rem; }
+  .glance-items { list-style: none; font-size: 12px; color: var(--muted); line-height: 1.8; }
+
+  /* DAY HEADERS */
+  .friday-header { background: transparent; padding: 2.5rem 1.5rem 2rem; text-align: center; border-top: 3px solid var(--friday-accent); }
+  .friday-theme-badge { display: inline-block; font-size: 10px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--friday-accent); background: rgba(74,127,168,0.1); padding: 4px 14px; border-radius: 20px; margin-bottom: 0.75rem; }
+  .friday-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.5rem, 4vw, 2rem); font-style: italic; color: var(--friday-accent); margin-bottom: 0.25rem; }
+  .friday-subtitle { font-size: 12px; color: #8AACCB; letter-spacing: 0.08em; }
+  .friday-schedule .schedule-item { border-bottom-color: rgba(74,127,168,0.15); }
+  .friday-schedule .schedule-time { color: var(--friday-gold); border-right-color: rgba(201,168,76,0.3); }
+  .friday-schedule .schedule-title { color: #2C4F6A; }
+  .friday-schedule .schedule-detail { color: #5A7A90; }
+  .friday-schedule .schedule-address { color: var(--friday-accent); }
+
+  .saturday-header { background: transparent; padding: 2.5rem 1.5rem 2rem; text-align: center; border-top: 3px solid var(--saturday-accent); }
+  .saturday-theme-badge { display: inline-block; font-size: 10px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--saturday-accent); background: rgba(139,106,174,0.12); padding: 4px 14px; border-radius: 20px; margin-bottom: 0.75rem; }
+  .saturday-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.5rem, 4vw, 2rem); font-style: italic; color: var(--saturday-accent); margin-bottom: 0.25rem; }
+  .saturday-subtitle { font-size: 12px; color: #A08AB8; letter-spacing: 0.08em; }
+
+  .sunday-header { background: var(--cream); padding: 2.5rem 1.5rem 2rem; text-align: center; border-top: 3px solid var(--sage); }
+  .sunday-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.5rem, 4vw, 2rem); font-style: italic; color: var(--forest); margin-bottom: 0.25rem; }
+  .sunday-subtitle { font-size: 12px; color: var(--muted); letter-spacing: 0.08em; }
+
+  /* SCHEDULE */
+  .schedule { width: 100%; margin: 0 auto; padding: 2rem 1.5rem; max-width: 100%; }
+  .schedule-item { display: grid; grid-template-columns: 80px 1fr; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid rgba(0,0,0,0.06); max-width: 720px; margin: 0 auto; }
+  .schedule-item:last-child { border-bottom: none; }
+  .schedule-time { font-size: 11px; font-weight: 500; letter-spacing: 0.08em; color: var(--gold); text-transform: uppercase; padding-top: 2px; text-align: right; padding-right: 1rem; border-right: 1px solid var(--gold-light); }
+  .schedule-title { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: var(--forest); font-weight: 400; margin-bottom: 0.2rem; }
+  .schedule-detail { font-size: 12px; color: var(--muted); line-height: 1.6; }
+  .schedule-address { display: block; font-size: 11px; color: var(--sage); margin-top: 4px; }
+  .schedule-address a { color: inherit; text-decoration: none; border-bottom: 1px solid currentColor; }
+  .tbd-tag { display: inline-block; font-size: 10px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); background: rgba(0,0,0,0.05); padding: 2px 8px; border-radius: 10px; margin-left: 6px; }
+
+  /* SATURDAY */
+  .saturday-schedule { background: transparent; }
+  .saturday-schedule .schedule-item { border-bottom-color: rgba(139,106,174,0.15); }
+  .saturday-schedule .schedule-time { color: var(--saturday-accent); border-right-color: rgba(139,106,174,0.25); }
+  .saturday-schedule .schedule-title { color: #3D2E52; }
+  .saturday-schedule .schedule-detail { color: #7A6A8A; }
+  .saturday-schedule .schedule-address { color: var(--saturday-pink); }
+  .saturday-schedule .tbd-tag { color: #A08AB8; background: rgba(139,106,174,0.1); }
+
+  /* TRAVEL */
+  .travel-bg { background: var(--white); border-top: 1px solid var(--gold-light); border-bottom: 1px solid var(--gold-light); }
+  .travel-tabs { display: flex; border-bottom: 1px solid var(--gold-light); margin-bottom: 1.5rem; overflow-x: auto; scrollbar-width: none; }
+  .travel-tabs::-webkit-scrollbar { display: none; }
+  .travel-tab { font-size: 11px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); padding: 10px 18px; cursor: pointer; border-bottom: 2px solid transparent; white-space: nowrap; background: none; border-top: none; border-left: none; border-right: none; font-family: 'Jost', sans-serif; transition: color 0.2s, border-color 0.2s; }
+  .travel-tab.active { color: var(--forest); border-bottom-color: var(--gold); }
+  .travel-panel { display: none; }
+  .travel-panel.active { display: block; }
+
+  .carpool-card { border: 1px solid var(--gold-light); padding: 1rem 1.25rem; margin-bottom: 10px; background: var(--cream); }
+  .carpool-card-title { font-family: 'Cormorant Garamond', serif; font-size: 1rem; color: var(--forest); margin-bottom: 0.5rem; }
+  .carpool-members { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 0.5rem; }
+  .pill { font-size: 11px; padding: 2px 10px; border-radius: 20px; font-weight: 400; }
+  .pill-driver { background: #E1F5EE; color: #085041; border: 0.5px solid #5DCAA5; }
+  .pill-passenger { background: #EEEDFE; color: #3C3489; border: 0.5px solid #AFA9EC; }
+  .pill-bart { background: #F1EFE8; color: #444441; border: 0.5px solid #B4B2A9; }
+  .pill-pending { background: #FAEEDA; color: #633806; border: 0.5px solid #EF9F27; }
+  .pill-tbd { background: #F1EFE8; color: #7A7A72; border: 0.5px solid #D3D1C7; }
+  .pill-ride { background: #FCEBEB; color: #A32D2D; border: 0.5px solid #F09595; }
+  .carpool-detail { font-size: 12px; color: var(--muted); line-height: 1.6; }
+  .carpool-leg { font-size: 10px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin: 6px 0 3px; }
+  .alert-card { border: 1px solid #F09595; border-left: 3px solid #E24B4A; padding: 0.75rem 1rem; margin-bottom: 10px; background: #FFF8F8; font-size: 12px; color: #791F1F; line-height: 1.6; }
+  .pending-card { border: 1px solid #EF9F27; border-left: 3px solid #EF9F27; padding: 0.75rem 1rem; margin-bottom: 10px; background: #FFFBF5; font-size: 12px; color: #633806; line-height: 1.6; }
+
+  .arrival-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+  .arrival-table th { font-size: 10px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); padding: 6px 8px; text-align: left; border-bottom: 1px solid var(--gold-light); }
+  .arrival-table td { padding: 8px 8px; color: var(--muted); border-bottom: 1px solid rgba(0,0,0,0.05); vertical-align: top; line-height: 1.5; }
+  .arrival-table td:first-child { color: var(--charcoal); font-weight: 400; white-space: nowrap; }
+  .arrival-table tr:last-child td { border-bottom: none; }
+
+  /* PACKING */
+  .packing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; }
+  .packing-category { border-left: 2px solid var(--gold-light); padding-left: 1rem; }
+  .packing-cat-title { font-family: 'Cormorant Garamond', serif; font-size: 1rem; color: var(--forest); margin-bottom: 0.5rem; }
+  .packing-items { list-style: none; font-size: 12px; color: var(--muted); line-height: 2; }
+  .packing-items li::before { content: '—'; margin-right: 6px; color: var(--gold); }
+
+  /* CONTACT */
+  .contact-bg { background: var(--forest); text-align: center; padding: 3rem 1.5rem; }
+  .contact-title { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic; color: var(--gold-light); margin-bottom: 1rem; }
+  .contact-detail { font-size: 13px; line-height: 2; color: rgba(255,255,255,0.7); }
+  .contact-detail a { color: var(--gold-light); text-decoration: none; }
+  .contact-hashtag { font-size: 11px; color: rgba(255,255,255,0.35); letter-spacing: 0.15em; margin-top: 1.5rem; }
+
+  .footer { background: var(--charcoal); text-align: center; padding: 1.5rem; font-size: 11px; color: rgba(255,255,255,0.25); letter-spacing: 0.1em; }
+  .gold-rule { border: none; border-top: 1px solid var(--gold-light); margin: 0; }
+
+  @media (max-width: 480px) {
+    .glance-grid { grid-template-columns: 1fr; }
+    .hero-frame { padding: 2rem 1.5rem; }
+    .schedule-item { grid-template-columns: 60px 1fr; }
+    .schedule-time { font-size: 10px; padding-right: 0.75rem; }
+    .nav-link { padding: 12px 12px; font-size: 10px; }
+  }
+  @media (prefers-color-scheme: dark) {
+    html, body { background: #FAF8F3 !important; color: #2C2C2A !important; }
+    body { background: #FAF8F3 !important; color: #2C2C2A !important; }
+    .hero, .nav, .glance-card, .carpool-card, .travel-bg { background: #FFFFFF !important; }
+    .schedule-title { color: #3D5C40 !important; }
+    .schedule-detail { color: #7A7A72 !important; }
+    .schedule-time { color: #C9A84C !important; }
+    .nav-link { color: #7A7A72 !important; }
+    .section-title { color: #3D5C40 !important; }
+    .glance-day { color: #3D5C40 !important; }
+    .contact-bg { background: #3D5C40 !important; }
+    .footer { background: #2C2C2A !important; }
+    .alert-card { background: #FFF8F8 !important; color: #791F1F !important; }
+    .pending-card { background: #FFFBF5 !important; color: #633806 !important; }
+  }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-frame">
+    <p class="hero-eyebrow">You're invited</p>
+    <h1 class="hero-title">Jen's<br>Bachelorette<br>Weekend</h1>
+    <div class="hero-divider"></div>
+    <p class="hero-sub">Lake Tahoe<br>July 10th–12th, 2026<br>4971 North Lake Blvd, Carnelian Bay, CA</p>
+    <span class="hero-hashtag">#jensgirls &nbsp;·&nbsp; #jengaged</span>
+  </div>
+</header>
+
+<nav class="nav" aria-label="Page sections">
+  <div class="nav-inner">
+    <a href="#glance" class="nav-link">Overview</a>
+    <a href="#friday" class="nav-link">Friday</a>
+    <a href="#saturday" class="nav-link">Saturday</a>
+    <a href="#sunday" class="nav-link">Sunday</a>
+    <a href="#travel" class="nav-link">Travel</a>
+    <a href="#packing" class="nav-link">Packing</a>
+    <a href="#contact" class="nav-link">Contact</a>
+  </div>
+</nav>
+
+<section id="glance">
+  <div class="section">
+    <p class="section-eyebrow">Weekend at a glance</p>
+    <h2 class="section-title"><em>Three days, one lake, all the girls</em></h2>
+    <div class="glance-grid">
+      <div class="glance-card">
+        <div class="glance-day">Friday</div>
+        <div class="glance-date">July 10</div>
+        <ul class="glance-items">
+          <li>Arrivals</li>
+          <li>Dinner at the AirBnB</li>
+          <li>Princess Diaries Night</li>
+          <li>Fire pit &amp; hot tub</li>
+        </ul>
+      </div>
+      <div class="glance-card">
+        <div class="glance-day">Saturday</div>
+        <div class="glance-date">July 11</div>
+        <ul class="glance-items">
+          <li>Breakfast</li>
+          <li>Morning activities</li>
+          <li>Lunch at the AirBnB</li>
+          <li>Afternoon boat tour</li>
+          <li>Taylor Swift: Eras — Dinner &amp; Bar</li>
+        </ul>
+      </div>
+      <div class="glance-card">
+        <div class="glance-day">Sunday</div>
+        <div class="glance-date">July 12</div>
+        <ul class="glance-items">
+          <li>Light breakfast</li>
+          <li>Checkout</li>
+          <li>Farewell brunch</li>
+          <li>Safe travels home</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="gold-rule">
+
+<section id="friday" style="background: linear-gradient(150deg, #EBF4FA 0%, #F5F0E8 50%, #FDF8EE 100%);">
+  <div class="friday-header">
+    <span class="friday-theme-badge">✦ Friday Night Theme ✦</span>
+    <div class="friday-title">Princess Diaries 2: The Royal Engagement</div>
+    <div class="friday-subtitle">Sleepover Edition</div>
+  </div>
+  <div class="schedule friday-schedule">
+    <div class="schedule-item">
+      <div class="schedule-time">4pm onwards</div>
+      <div>
+        <div class="schedule-title">Arrivals</div>
+        <div class="schedule-detail">Guests arriving throughout the evening — see Travel section for individual arrival times and carpool groups.
+          <span class="schedule-address">📍 <a href="https://maps.app.goo.gl/example1" target="_blank">4971 North Lake Blvd, Carnelian Bay, CA 96140</a></span>
+        </div>
+      </div>
+    </div>
+    <div class="schedule-item">
+      <div class="schedule-time">7pm</div>
+      <div>
+        <div class="schedule-title">Dinner at the AirBnB</div>
+        <div class="schedule-detail">Menu details coming soon.</div>
+      </div>
+    </div>
+    <div class="schedule-item">
+      <div class="schedule-time">8:30pm</div>
+      <div>
+        <div class="schedule-title">Princess Diaries Sleepover 👑</div>
+        <div class="schedule-detail">Drinks, games, and royal chaos. BYO cute pajamas encouraged.</div>
+      </div>
+    </div>
+    <div class="schedule-item">
+      <div class="schedule-time">Night</div>
+      <div>
+        <div class="schedule-title">Fire Pit &amp; Hot Tub 🔥</div>
+        <div class="schedule-detail">Wind down around the fire or soak under the stars.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="gold-rule">
+
+<section id="saturday" style="background: linear-gradient(135deg, #F5DCE8 0%, #EDE4F5 35%, #D8E8F5 70%, #E8E0F5 100%);">
+  <div class="saturday-header">
+    <span class="saturday-theme-badge">✦ Saturday Night Theme ✦</span>
+    <div class="saturday-title">Taylor Swift: Eras</div>
+    <div class="saturday-subtitle">Celebrating Jen's engaged era</div>
+  </div>
+  <div class="schedule saturday-schedule">
+    <div class="schedule-item">
+      <div class="schedule-time">9:30am</div>
+      <div>
+        <div class="schedule-title">Breakfast at the AirBnB</div>
+        <div class="schedule-detail">Continental breakfast options to enjoy together or on your own schedule.</div>
+      </div>
+    </div>
+    <div class="schedule-item">
+      <div class="schedule-time">Morning</div>
+      <div>
+        <div class="schedule-title">Downtime or Optional Outdoor Activity <span class="tbd-tag">TBD</span></div>
+        <div class="schedule-detail">Take time to chill or join for an optional outdoor activity. Think short hike, beach walk, yoga, for those who want it. Details coming soon.</div>
+      </div>
+    </div>
+    <div class="schedule-item">
+      <div class="schedule-time">12–1:30pm</div>
+      <div>
+        <div class="schedule-title">Lunch at the AirBnB</div>
+        <div class="schedule-detail">Grilling some classics to enjoy in the AirBnB's outdoor patio — menu details coming soon.</div>
+      </div>
+    </div>
+    <div class="schedule-item">
+      <div class="schedule-time">2–5pm</div>
+      <div>
+        <div class="schedule-title">Private Boat Tour ⛵</div>
+        <div class="schedule-detail">A vintage-style private charter — think champagne, charcuterie, swimming stops at serene coves, and golden-hour photos on the water.
+          <span style="display:block;font-size:11px;color:var(--gold);font-weight:500;margin-top:4px;letter-spacing:0.04em;">Capacity 12 · $203/pp all-inclusive (charcuterie included) · Rachel not attending</span>
+          <span class="schedule-address">📍 Carnelian Bay Dock Area · ~5 min drive from AirBnB</span>
+        </div>
+      </div>
+    </div>
+    <div class="schedule-item">
+      <div class="schedule-time">5–7pm</div>
+      <div>
+        <div class="schedule-title">Downtime at the AirBnB</div>
+        <div class="schedule-detail">Rest up and get ready for the night.</div>
+      </div>
+    </div>
+    <div class="schedule-item">
+      <div class="schedule-time">Evening</div>
+      <div>
+        <div class="schedule-title">Dinner on the Lake <span class="tbd-tag">TBD</span></div>
+        <div class="schedule-detail">Dinner in Tahoe City, details coming soon.</div>
+      </div>
+    </div>
+    <div class="schedule-item">
+      <div class="schedule-time">Night</div>
+      <div>
+        <div class="schedule-title">Drinks &amp; Live Music 🍻</div>
+        <div class="schedule-detail">We'll head to Alibi Ale Works — Truckee Public House for drinks and music, with options to stay put or pub crawl depending on the vibes.
+          <span class="schedule-address">📍 <a href="https://maps.app.goo.gl/bNvKFjinnkACtoiP7" target="_blank">10069 Bridge St, Truckee, CA 96161</a> · ~20 min drive from dinner</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="gold-rule">
+
+<section id="sunday">
+  <div class="sunday-header">
+    <div class="sunday-title">Sunday · July 12</div>
+    <div class="sunday-subtitle">Slow mornings &amp; safe travels</div>
+  </div>
+  <div class="schedule">
+    <div class="schedule-item">
+      <div class="schedule-time">All Day</div>
+      <div>
+        <div class="schedule-title">Departures</div>
+        <div class="schedule-detail">See Travel section for individual departure times and carpool groups.</div>
+      </div>
+    </div>
+    <div class="schedule-item">
+      <div class="schedule-time">9–10am</div>
+      <div>
+        <div class="schedule-title">Light Breakfast at the AirBnB</div>
+        <div class="schedule-detail">Light bites and grab-and-go options for early departures.</div>
+      </div>
+    </div>
+    <div class="schedule-item">
+      <div class="schedule-time">10–11am</div>
+      <div>
+        <div class="schedule-title">AirBnB Checkout</div>
+        <div class="schedule-detail">Please plan to help follow AirBnB checkout instructions and head out by 11am.</div>
+      </div>
+    </div>
+    <div class="schedule-item">
+      <div class="schedule-time">11:30am–1:30pm</div>
+      <div>
+        <div class="schedule-title">Farewell Brunch at Gar Woods Grill &amp; Pier</div>
+        <div class="schedule-detail">Waterfront brunch just steps away — a perfect send-off with lake views.
+          <span class="schedule-address">📍 <a href="https://maps.app.goo.gl/jtRRRYa6ZKS3xvGv5" target="_blank">5000 North Lake Blvd, Carnelian Bay, CA 96140</a> · (530) 546-3366</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="gold-rule">
+
+<section id="travel" class="travel-bg">
+  <div class="section">
+    <p class="section-eyebrow">Getting there &amp; back</p>
+    <h2 class="section-title"><em>Travel &amp; Carpools</em></h2>
+    <div class="travel-tabs" role="tablist">
+      <button class="travel-tab active" onclick="showTravel('arrivals',this)">Friday Arrivals</button>
+      <button class="travel-tab" onclick="showTravel('departures',this)">Sunday Departures</button>
+      <button class="travel-tab" onclick="showTravel('carpools',this)">Carpool Groups</button>
+    </div>
+
+    <div id="travel-arrivals" class="travel-panel active">
+      <p style="font-size:12px;color:var(--muted);margin-bottom:1.25rem;">All roads lead to <a href="https://maps.app.goo.gl/example1" target="_blank" style="color:var(--sage)">4971 North Lake Blvd, Carnelian Bay, CA 96140</a> — approximately 1h from Reno, 1.5h from Sacramento, and 2.5–3h from the Bay Area.</p>
+      <p style="font-size:10px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;">Thursday 7/9 — Pre-arrivals</p>
+      <table class="arrival-table" style="margin-bottom:1.5rem">
+        <thead><tr><th>Who</th><th>Details</th></tr></thead>
+        <tbody>
+          <tr><td>Karen</td><td>Lands Santa Rosa (STS) 6:43pm · staying at Jen's in Rohnert Park · joins Rachel's car Friday</td></tr>
+          <tr><td>Nichole</td><td>Lands Oakland (OAK) 9:41pm · drives home to Pleasant Hill · departs for AirBnB Friday morning</td></tr>
+        </tbody>
+      </table>
+      <p style="font-size:10px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;">Friday 7/10 — Arrivals to AirBnB</p>
+      <table class="arrival-table">
+        <thead><tr><th>Est. Arrival</th><th>Who</th><th>How</th></tr></thead>
+        <tbody>
+          <tr><td>~Noon–2pm</td><td>Rachel, Jen, Karen, Hannah</td><td>Rachel's car · from Rohnert Park · flexible morning departure</td></tr>
+          <tr><td>~2:20pm</td><td>Nichole, Vanessa</td><td>Nichole's car · from Pleasant Hill · Vanessa joins via BART · departs by 12pm</td></tr>
+          <tr><td>~2–2:30pm</td><td>Nolynn, Kaileen, Dawn</td><td>Nolynn's car · from Roseville · picks up Dawn at SMF (lands 12:15pm)</td></tr>
+          <tr><td>~2:15–3:15pm</td><td>Sarah</td><td>Sarah's car · from Concord · departs ~12–1pm</td></tr>
+          <tr><td>~3:30pm</td><td>Keira</td><td><span class="pill pill-ride">Transit to AirBnB TBD</span> Lands RNO 2:30pm (F9 3625) · ~1h to AirBnB</td></tr>
+          <tr><td>~8pm</td><td>Kaiti</td><td>Lands RNO ~7pm · picks up rental car · ~1h drive</td></tr>
+          <tr><td>TBD</td><td>Nora</td><td><span class="pill pill-ride">TBD</span> Travel plans not yet confirmed</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div id="travel-departures" class="travel-panel">
+      <p style="font-size:12px;color:var(--muted);margin-bottom:1.25rem;">Departing from <a href="https://maps.app.goo.gl/example1" target="_blank" style="color:var(--sage)">4971 North Lake Blvd, Carnelian Bay, CA 96140</a>.</p>
+      <table class="arrival-table">
+        <thead><tr><th>Time</th><th>Who</th><th>Details</th></tr></thead>
+        <tbody>
+          <tr><td>~5am</td><td>Kaiti</td><td>Returns rental at RNO · 6am flight · departs before everyone else</td></tr>
+          <tr><td>~10am</td><td>Nichole</td><td>Drives home to Pleasant Hill · drops car · Ubers to OAK for 5:05pm flight (DL3903)</td></tr>
+          <tr><td>~1:30pm</td><td>Keira</td><td><span class="pill pill-ride">Transit to RNO TBD</span> 3:29pm flight (F9 3626)</td></tr>
+          <tr><td>After checkout</td><td>Nolynn, Kaileen, Dawn</td><td>Nolynn's car toward Sacramento · drops Dawn at SMF · Nolynn + Kaileen to Roseville · by 4pm</td></tr>
+          <tr><td>After checkout</td><td>Sarah, Vanessa</td><td>Sarah's car to Concord · drops Vanessa at Concord BART · flexible</td></tr>
+          <tr><td>After checkout</td><td>Rachel, Jen, Karen, Hannah</td><td>Rachel's car to Rohnert Park · flexible · Karen stays until Mon 7/14 flight</td></tr>
+          <tr><td>TBD</td><td>Nora</td><td><span class="pill pill-ride">TBD</span> Travel plans not yet confirmed</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div id="travel-carpools" class="travel-panel">
+      <div class="carpool-card">
+        <div class="carpool-card-title">✦ Rachel's car — Rohnert Park · both ways</div>
+        <div class="carpool-members">
+          <span class="pill pill-driver">Rachel (driver)</span>
+          <span class="pill pill-passenger">Jen</span>
+          <span class="pill pill-passenger">Karen</span>
+          <span class="pill pill-passenger">Hannah</span>
+          <span class="pill pill-tbd">1 seat open</span>
+        </div>
+        <div class="carpool-leg">Friday</div>
+        <div class="carpool-detail">From Rohnert Park, flexible departure · ~1h 45min via I-80 E · est. noon–2pm arrival.</div>
+        <div class="carpool-leg">Sunday</div>
+        <div class="carpool-detail">Back to Rohnert Park, flexible timing.</div>
+      </div>
+
+      <div class="carpool-card">
+        <div class="carpool-card-title">✦ Nolynn's car — Roseville/Sacramento · both ways</div>
+        <div class="carpool-members">
+          <span class="pill pill-driver">Nolynn (driver)</span>
+          <span class="pill pill-passenger">Kaileen</span>
+          <span class="pill pill-passenger">Dawn</span>
+          <span class="pill pill-tbd">1 seat open</span>
+        </div>
+        <div class="carpool-leg">Friday</div>
+        <div class="carpool-detail">From Roseville after 12pm · swings through SMF ~12:30pm for Dawn · ~1h 30min to AirBnB · est. 2–2:30pm.</div>
+        <div class="carpool-leg">Sunday</div>
+        <div class="carpool-detail">Back toward Sacramento · drops Dawn at SMF for her SMF→SAN flight · Nolynn + Kaileen continue to Roseville · by 4pm.</div>
+      </div>
+
+      <div class="carpool-card">
+        <div class="carpool-card-title">✦ Nichole's car — Pleasant Hill · Friday only</div>
+        <div class="carpool-members">
+          <span class="pill pill-driver">Nichole (driver)</span>
+          <span class="pill pill-bart">Vanessa via BART</span>
+          <span class="pill pill-tbd">4 seats open Fri</span>
+        </div>
+        <div class="carpool-leg">Friday</div>
+        <div class="carpool-detail">Vanessa BARTs to East Bay · Nichole picks up · departs by 12pm · ~2h 20min · est. 2:20pm arrival.</div>
+        <div class="carpool-leg">Sunday</div>
+        <div class="carpool-detail">Nichole drives solo ~10am · home to Pleasant Hill · Ubers to OAK for 5:05pm flight.</div>
+      </div>
+
+      <div class="carpool-card">
+        <div class="carpool-card-title">✦ Sarah's car — Concord · Sunday only</div>
+        <div class="carpool-members">
+          <span class="pill pill-driver">Sarah (driver)</span>
+          <span class="pill pill-passenger">Vanessa</span>
+          <span class="pill pill-tbd">1 seat open Sun</span>
+        </div>
+        <div class="carpool-leg">Friday</div>
+        <div class="carpool-detail">Sarah drives solo from Concord · ~2h 15min · est. 2:15–3:15pm · 2 open seats.</div>
+        <div class="carpool-leg">Sunday</div>
+        <div class="carpool-detail">Sarah + Vanessa back to Concord · drops Vanessa at Concord BART · flexible timing.</div>
+      </div>
+
+      <div class="carpool-card">
+        <div class="carpool-card-title">✦ Kaiti — rental car · self-sufficient</div>
+        <div class="carpool-members">
+          <span class="pill pill-driver">Kaiti (rental)</span>
+        </div>
+        <div class="carpool-leg">Friday</div>
+        <div class="carpool-detail">Lands RNO ~7pm · picks up rental · ~1h to AirBnB · arrives ~8pm · extra vehicle all weekend.</div>
+        <div class="carpool-leg">Sunday</div>
+        <div class="carpool-detail">Leaves ~5am · returns rental at RNO · 6am flight.</div>
+      </div>
+
+      <div class="alert-card">
+        <strong>Keira — transit to/from RNO TBD</strong><br>
+        Lands RNO Friday 2:30pm (F9 3625) and departs RNO Sunday 3:29pm (F9 3626). Transportation being arranged for both legs — approximately $50–70 each way, ~1h ride.
+      </div>
+
+      <div class="pending-card">
+        <strong>Nora — travel plans TBD</strong><br>
+        Open seats available: Nichole (4 open Fri), Sarah (2 open Fri / 1 open Sun).
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="gold-rule">
+
+<section id="packing">
+  <div class="section">
+    <p class="section-eyebrow">What to bring</p>
+    <h2 class="section-title"><em>Packing List</em></h2>
+    <p style="font-size:12px;color:var(--muted);margin-bottom:1.5rem;">This list will be updated as more activity details are confirmed — check back closer to the weekend!</p>
+    <div class="packing-grid">
+      <div class="packing-category">
+        <div class="packing-cat-title">Essentials</div>
+        <ul class="packing-items">
+          <li>ID &amp; any travel docs</li>
+          <li>Phone charger</li>
+          <li>Cash &amp; cards</li>
+          <li>Any medications</li>
+        </ul>
+      </div>
+      <div class="packing-category">
+        <div class="packing-cat-title">Lake &amp; Outdoors</div>
+        <ul class="packing-items">
+          <li>Swimsuit</li>
+          <li>Sunscreen (high SPF)</li>
+          <li>Sunglasses &amp; hat</li>
+          <li>Light layers / jacket / hoodie</li>
+          <li>Secure fitting sandals/shoes for boat (no flip flops)</li>
+        </ul>
+      </div>
+      <div class="packing-category">
+        <div class="packing-cat-title">Friday Night 👑</div>
+        <ul class="packing-items">
+          <li>Cute sleepover clothes — think Princess Diaries 2 sleepover scenes</li>
+          <li>Optional: Drinks of your choice</li>
+          <li>Optional: Extra swimsuit &amp; towel for hot tub</li>
+        </ul>
+      </div>
+      <div class="packing-category">
+        <div class="packing-cat-title">Saturday Night 🌟</div>
+        <ul class="packing-items">
+          <li>Your Taylor Swift era outfit</li>
+          <li>Glitter / sequins welcome</li>
+          <li>Going out shoes</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="gold-rule">
+
+<section id="contact" class="contact-bg">
+  <div class="contact-title">Questions? We've got you.</div>
+  <p class="contact-detail">
+    Reach out to your point of contact:<br>
+    <strong style="color:var(--gold-light)">Vanessa</strong><br>
+    <a href="tel:6617552810">661-755-2810</a>
+  </p>
+  <p class="contact-hashtag">#jensgirls · Lake Tahoe · July 2026</p>
+</section>
+
+<footer class="footer">Jen's Bachelorette Weekend · Lake Tahoe · July 10–12, 2026</footer>
+
+<script>
+function showTravel(panel, btn) {
+  document.querySelectorAll('.travel-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.travel-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('travel-' + panel).classList.add('active');
+  btn.classList.add('active');
+}
+</script>
+</body>
+</html>
